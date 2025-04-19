@@ -14,5 +14,8 @@ class Database {
     query(text, params) {
         return this.pool.query(text, params);
     }
+    connect() {
+        return this.pool.connect(); // <--- ¡Este es el método que faltaba!
+    }
 }
 module.exports= new Database();

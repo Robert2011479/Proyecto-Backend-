@@ -3,7 +3,7 @@ const db = require('./config/db');
 
 (async ()=>{
     try {
-        const result = await db.query('SELECT * from usuario');
+        const result = await db.query('SELECT * from clientes');
         console.log('Conexion exitosa a la fecha y hora actual:',result.rows[0])
     } catch (error) {
         console.error('Error de conexion',error);

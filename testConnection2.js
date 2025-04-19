@@ -1,4 +1,4 @@
-const db = require('./config/db2');
+const db = require('./backend/config/db2');
 
 (async () => {
     try {
