@@ -22,7 +22,7 @@ class productController {
             if (!product) {
                 return res.status(404).json({message:'Producto no encontrado'})
             }
-            res.json(product); // ✅ IMPORTANTE: Enviar el producto si se encontró
+            res.json(product); //Enviar el producto si se encontró
         } catch (error) {
             console.error(error);
             res.status(500).json({message:'Error al obtener los productos'}); 
@@ -40,7 +40,6 @@ class productController {
         } 
     }
     //para actualizar un producto
-    // ✅ Forma correcta:
      async updateProduct(req, res) {
     try {
         const { id } = req.params;
@@ -52,6 +51,7 @@ class productController {
         res.status(500).json({ message: 'Error al actualizar el producto' });
     }
     }
+    //para eliminar un producto
     async deleteProduct(req, res) {
         try {
             const { id } = req.params;
