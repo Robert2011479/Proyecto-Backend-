@@ -1,4 +1,4 @@
-// la carpeta db.js para conectar postgres 
+//db.js para conectar postgres 
 const { Pool } = require('pg');
 
 class Database {
@@ -15,7 +15,7 @@ class Database {
         return this.pool.query(text, params);
     }
     connect() {
-        return this.pool.connect(); // <--- ¡Este es el método que faltaba!
+        return this.pool.connect();
     }
 }
 module.exports= new Database();
